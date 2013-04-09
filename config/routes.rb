@@ -6,6 +6,8 @@ App04::Application.routes.draw do
 
   get "comments/destroy"
 
+  get "comments/edit"
+
   resources :posts do
 	  resources :comments
   end
