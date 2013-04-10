@@ -10,7 +10,7 @@ App04::Application.routes.draw do
 
   put "comments/update"
 
-  match "comments/update" => "comments#update#id",  :as => :update
+  match '/comments/update', :controller => 'comments', :action => 'update'
 
   resources :posts do
 	  resources :comments
