@@ -8,6 +8,10 @@ App04::Application.routes.draw do
 
   get "comments/edit"
 
+  put "comments/update"
+
+  match "comments/update" => "comments#update#id",  :as => :update
+
   resources :posts do
 	  resources :comments
   end
