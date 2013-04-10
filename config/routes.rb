@@ -8,9 +8,9 @@ App04::Application.routes.draw do
 
   get "comments/edit"
 
-  put "comments/update"
+  #post "comments#update"
 
-  match '/comments/update', :controller => 'comments', :action => 'update'
+  match '/comments/update', :controller => :comments, :action => :update, :method => :post
 
   resources :posts do
 	  resources :comments
