@@ -1,0 +1,27 @@
+%h1
+	= @post.title
+= @post.text
+
+%h2
+	comments
+- @post.comments.each do |comment|
+	%p
+		%b= comment.id
+		%br= comment.text
+
+	%p
+		= time_ago_in_words comment.created_at
+		ago
+	%p
+		= link_to 'Edit comment', edit_post_comment_path(@post, comment), :method => :get
+		|
+		= link_to 'Delete comment', [@post, comment], :method => :delete, :confirm => 'Are you sure ?'
+
+= form_for [@post, @post.comments.build] do |f|
+	%p= f.text_area :text, :size => "60x10"
+	%p= f.submit "Post comment"
+
+%p
+	= link_to 'Edit', edit_post_path(@post)
+	= link_to 'Back', posts_path
+	= link_to 'Delete', @post, :method => :delete, :confirm => "Are you sure?"
