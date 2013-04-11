@@ -1,6 +1,6 @@
-<%= form_for([@post,@comment],:url => post_comment_path, :method => :put) do |f| %>
+<%= form_for([@post,@comment], :url => post_comment_path) do |f| %>
   <div class="field">
-    <%= f.text_area :text %>
+    <%= f.text_area :text, :rows => '10', :cols => '60' %>
   </div>
   <div class="actions">
     <%= f.submit %>

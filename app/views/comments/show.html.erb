@@ -1,6 +1,6 @@
 <%= @comment.text %>
 <p>
-  <%= link_to 'Back', post_path %>
+  <%= link_to 'Back', @comment.post %>
   <%= link_to 'Edit comment', edit_post_comment_path, :method => :get %> |
   <%= link_to 'Delete comment', post_comment_path, :method => :delete, :confirm => 'Are you sure ?' %>
 </p>

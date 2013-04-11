@@ -6,11 +6,11 @@ App04::Application.routes.draw do
 
   get "comments/destroy"
 
-  get "comments/edit"
+  #get "comments/edit"
 
-  put "comments/update"
+  #put "comments/update"
 
-  get "comments/show"
+  #get "comments/show"
 
   #match '/comments/update', :controller => :comments, :action => :update, :method => :post
 
