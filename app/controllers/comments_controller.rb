@@ -26,8 +26,6 @@ class CommentsController < ApplicationController
 
 	def update
 		@comment = Comment.find(params[:id])
-		#redirect_to @comment.post
-
 		respond_to do |format|
 			if @comment.update_attributes(params[:comment])
 				format.html { redirect_to @comment.post, notice: 'Comment was successfully updated.' }
