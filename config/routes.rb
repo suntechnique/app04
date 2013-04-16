@@ -1,5 +1,11 @@
 App04::Application.routes.draw do
 
+  get "users/new"
+
+  get "users/edit"
+
+  get "users/delete"
+
   get "home/index"
 
   get "comments/create"
@@ -11,8 +17,6 @@ App04::Application.routes.draw do
   #put "comments/update"
 
   #get "comments/show"
-
-  #match '/comments/update', :controller => :comments, :action => :update, :method => :post
 
   resources :posts do
 	  resources :comments
