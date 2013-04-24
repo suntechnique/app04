@@ -52,14 +52,14 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: blog_development
+  database: blog_test
   pool: 5
   username: rails_user
   password: f0udl7z6A
 production:
   adapter: postgresql
   encoding: utf8
-  database: blog_development
+  database: blog_production
   pool: 5
   username: rails_user
   password: f0udl7z6A
