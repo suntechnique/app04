@@ -13,7 +13,10 @@ gem 'bcrypt-ruby'
 
 group :test, :development do
 	gem "rspec-rails"
+	gem 'capybara', '1.1.2'
 end
+
+#gem "capybara", '1.1.2', :group => "test"
 
 
 # Gems used only for assets and not required

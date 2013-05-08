@@ -1,5 +1,7 @@
 App04::Application.routes.draw do
 
+  get "static_pages/home"
+
   get "users/new"
 
   get "users/edit"
