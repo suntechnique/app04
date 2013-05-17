@@ -12,7 +12,7 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 
 group :test, :development do
-	gem "rspec-rails"
+	gem 'rspec-rails'
 	gem 'capybara', '1.1.2'
 end
 
