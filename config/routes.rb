@@ -1,19 +1,20 @@
 App04::Application.routes.draw do
 
-  get "static_pages/home"
-  get "static_pages/help"
-  get "static_pages/about"
+ # get "static_pages/home"
+  #get "static_pages/help"
+  #get "static_pages/about"
+  #get "static_pages/contact"
+
+  match '/home', to: 'static_pages#home'
+  match '/help', to: 'static_pages#help'
+  match '/contact', to: 'static_pages#contact'
+  match '/about', to: 'static_pages#about'
 
   get "users/new"
-
   get "users/edit"
-
   get "users/delete"
 
-  get "home/index"
-
   get "comments/create"
-
   get "comments/destroy"
 
   #get "comments/edit"
@@ -26,7 +27,7 @@ App04::Application.routes.draw do
 	  resources :comments
   end
 
-	root :to => 'home#index'
+  root to: 'home#index'
 
 
   # The priority is based upon order of creation:
