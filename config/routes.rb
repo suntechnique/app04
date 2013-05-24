@@ -1,18 +1,23 @@
 App04::Application.routes.draw do
 
- # get "static_pages/home"
+	#get "static_pages/home"
   #get "static_pages/help"
   #get "static_pages/about"
   #get "static_pages/contact"
 
-  match '/home', to: 'static_pages#home'
-  match '/help', to: 'static_pages#help'
-  match '/contact', to: 'static_pages#contact'
-  match '/about', to: 'static_pages#about'
+  match 'home', to: 'static_pages#home'
+  match 'help', to: 'static_pages#help'
+  match 'contact', to: 'static_pages#contact'
+  match 'about', to: 'static_pages#about'
 
   get "users/new"
-  get "users/edit"
-  get "users/delete"
+  #get "users/edit"
+  #get "users/delete"
+
+  match '/signup', to: 'users#new'
+  #match '/signup', to: 'users#edit'
+  #match '/signup', to: 'users#info'
+  #match '/signup', to: 'users#delete'
 
   get "comments/create"
   get "comments/destroy"
