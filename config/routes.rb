@@ -10,7 +10,8 @@ App04::Application.routes.draw do
   match 'contact', to: 'static_pages#contact'
   match 'about', to: 'static_pages#about'
 
-  get "users/new"
+  resources :users
+  #get "users/new"
   #get "users/edit"
   #get "users/delete"
 
