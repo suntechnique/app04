@@ -10,6 +10,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+#gem 'papeclip'
 
 group :test, :development do
 	gem 'factory_girl_rails'

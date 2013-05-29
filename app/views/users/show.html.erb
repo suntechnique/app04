@@ -3,8 +3,12 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+	      <% if @user.errors.any? %>
+		      <% render 'shared/show_error' %>
+		    <% else %>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+		    <% end %>
       </h1>
     </section>
   </aside>
