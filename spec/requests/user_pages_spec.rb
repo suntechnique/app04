@@ -29,7 +29,6 @@ describe "UserPages" do
 		end
 
 		describe "with valid information" do
-			#before { click_button "Sign in" }
 
 			before do
 				fill_in "Name",         with: "Username01"
