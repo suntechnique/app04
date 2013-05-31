@@ -29,6 +29,7 @@ describe "UserPages" do
 		end
 
 		describe "with valid information" do
+			#before { click_button "Sign in" }
 
 			before do
 				fill_in "Name",         with: "Username01"
@@ -42,14 +43,14 @@ describe "UserPages" do
 			end
 
 			describe "after saving the user" do
-				it { should have_link('Sign in') }
-			end
 
-			describe "followed by signout" do
-				before { click_link "Sign out" }
-				it { should have_link('Sign in') }
-			end
+				let(:user) { User.find_by_email('user01@email.com') }
+				before { click_button submit }
 
+				it { should have_selector('title', text: user.name) }
+				it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+				it { should have_link('Sign out') }
+			end
 
 		end
 	end
