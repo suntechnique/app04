@@ -10,7 +10,10 @@ gem 'pg'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
-#gem 'papeclip'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+#gem 'paperclip'
 
 group :test, :development do
 	gem 'factory_girl_rails'
