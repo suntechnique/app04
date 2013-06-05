@@ -1,5 +1,9 @@
 App04::Application.routes.draw do
 
+  #get "images/show"
+  #get "images/new"
+  #get "images/destroy"
+
 	#get "static_pages/home"
   #get "static_pages/help"
   #get "static_pages/about"
@@ -10,7 +14,12 @@ App04::Application.routes.draw do
   match 'contact', to: 'static_pages#contact'
   match 'about', to: 'static_pages#about'
 
-  resources :users
+  resources :users do
+	  resources :images, only: [:new, :destroy, :show]
+  end
+
+  match 'show', to: 'images#show'
+
   resources :sessions, only: [:new, :create, :destroy]
   #get "users/new"
   #get "users/edit"
