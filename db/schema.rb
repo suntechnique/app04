@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(:version => 20130604094922) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",           :default => false
-    t.string   "avatar"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
