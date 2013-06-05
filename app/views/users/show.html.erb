@@ -3,7 +3,7 @@
   <aside class="span4">
     <section>
       <h1>
-        <%= user_avatar @user %>
+        <%= image_tag @user.avatar.url, size: "200x200" %>
         <%= @user.name %>
       </h1>
     </section>
