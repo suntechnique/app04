@@ -2,19 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .users-list{
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+
   a{
     padding-left:5px;
     padding-right:5px;
     text-shadow:1px 1px 1px #FFF;
   }
   &:hover{
+    -moz-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1fit s ease-in-out;
+
     background: #fcfcfc; /* Old browsers */
-    background: -moz-linear-gradient(top, #fcfcfc 0%, #eeeeee 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #fcfcfc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #fcfcfc 0%,#eeeeee 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #fcfcfc 0%,#eeeeee 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #fcfcfc 0%,#eeeeee 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+  }
+  /*&:active .user-card{
+    display:block;
+  }*/
+  .user-card{
+    display:none;
   }
 }

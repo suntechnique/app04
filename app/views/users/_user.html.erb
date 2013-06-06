@@ -1,6 +1,40 @@
-<li id="<%= :user_id %>" class="users-list">
+<li id="user-list-id-<%= user.id %>" class="users-list" onclick="$.open_user_card('#user-list-id-<%= user.id %>')">
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
   <%= link_to "delete", user, :style => "float:right" ,method: :delete,data: { confirm: "You sure?" } %>
   <% end %>
+
+	<!-- <ul class="user-card user-card-closed">
+		<li> -->
+		  <div class="user-card user-card-closed">
+		    <aside class="span4">
+		      <section>
+		        <h1>
+		          <%= user.name %>
+		        </h1>
+		      </section>
+		    </aside>
+		  </div>
+		<!-- </li>
+	</ul> -->
+
 </li>
+
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <%= link_to user.name, user %>
+        <% if current_user.admin? && !current_user?(user) %>
+          <%= link_to "delete", user, :style => "float:right" ,method: :delete,data: { confirm: "You sure?" } %>
+        <% end %>
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        <%= user.name %>
+      </div>
+    </div>
+  </div>
+</div>
