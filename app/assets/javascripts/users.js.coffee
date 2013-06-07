@@ -2,7 +2,11 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
+<<<<<<< HEAD
 
+=======
+#
+>>>>>>> updating-users
 current_card = ''
 last_card = ''
 
@@ -14,12 +18,18 @@ $.open_user_card = (id) ->
 		$(id + ' .user-card').hide('fast')
 		$(id + ' .user-card').attr({'class':'user-card user-card-closed'})
 	else
+<<<<<<< HEAD
 		$(last_card + ' .user-card').hide('fast')
 		$(last_card + ' .user-card').attr({'class':'user-card user-card-closed'})
+=======
+		$('.user-card-open').hide('fast')
+		$('.user-card-open').attr({'class':'user-card user-card-closed'})
+>>>>>>> updating-users
 		$(id + ' .user-card').show('fast')
 		$(id + ' .user-card').attr({'class':'user-card user-card-open'})
 
 	last_card = current_card
+<<<<<<< HEAD
 
 #	#alert('id: ' + id + '\r\nlast_card: ' + last_card + '\r\nclass: ' + cls)
 
@@ -50,4 +60,7 @@ $.open_user_card = (id) ->
 			#$('.user-card-open-previous').attr({'class':'user-card user-card-closed'})
 #		,1000
 
+=======
+
+>>>>>>> updating-users
 #	#alert('id: ' + id + '\r\nlast_card: ' + last_card + '\r\nclass: ' + cls)

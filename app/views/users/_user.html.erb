@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <li id="user-line-id-<%= user.id %>" class="users-line" onclick="$.open_user_card('#user-line-id-<%= user.id %>')">
   <%= link_to user.name, user %>
   <% if current_user.admin? && !current_user?(user) %>
@@ -26,3 +27,26 @@
 	</ul> -->
 
 </li>
+=======
+<div id="user-line-id-<%= user.id %>" class="users-line" onclick="$.open_user_card('#user-line-id-<%= user.id %>')">
+  <div class="user-line-heading">
+    <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"> -->
+	  <ul>
+		  <li>
+        <%= link_to user.name, user %>
+			</li>
+		  <li style="float:right">
+        <% if current_user.admin? && !current_user?(user) %>
+          <%= link_to "delete", user ,method: :delete,data: { confirm: "You sure?" } %>
+        <% end %>
+		  </li>
+	  </ul>
+    <!-- </a> -->
+  </div>
+  <div id="user-card-<%= user.id %>" class="user-card">
+    <div class="user-card-inner">
+      <%= user.name %>
+    </div>
+  </div>
+</div>
+>>>>>>> updating-users
