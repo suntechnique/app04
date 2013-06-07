@@ -26,8 +26,15 @@ $.open_user_card = (id) ->
 ###############################################################################
 ###############################################################################
 
-$.print_card = (id) ->
-	$('id').contentWindow.print()
+$.open_for_print_card = (id) ->
+	$(id).attr({'class':'modal-body body-for-print-open'})
+
+$.print_card = ->
+	$('.body-for-print-open').contentWindow.print()
+	#alert('print: ' + id)
+
+$.close_card = (id) ->
+	$(id).attr({'class':'modal-body body-for-print-closed'})
 
 
 #current_card = ''

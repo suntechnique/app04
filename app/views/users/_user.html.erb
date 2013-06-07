@@ -12,7 +12,7 @@
         <h1><%= user.name %></h1>
       </section>
       <section class="user-control-panel">
-        <a href="#myModal-<%= user.id %>" role="button" class="btn btn-primary" data-toggle="modal">print</a>
+        <a href="#myModal-<%= user.id %>" role="button" class="btn btn-primary" data-toggle="modal" onclick="$.open_for_print_card('#print-id-<%= user.id %>')">print</a>
       </section>
     </aside>
   </div>
@@ -21,14 +21,14 @@
 
 <div id="myModal-<%= user.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$.close_card('#print-id-<%= user.id %>')">×</button>
     <h3 id="myModalLabel"><%= user.name %></h3>
   </div>
-  <div id="print-id-<%= user.id %>" class="modal-body">
-    <p>card</p>
+  <div id="print-id-<%= user.id %>" class="modal-body body-for-print-closed">
+    <p><%= user.name %> card</p>
   </div>
   <div class="modal-footer">
-    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-    <button class="btn btn-primary" onclick="print_card('#print-id-<%= user.id %>')">Print</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true" onclick="$.close_card('#print-id-<%= user.id %>')">Close</button>
+    <button class="btn btn-primary" onclick="$.print_card()">Print</button>
   </div>
 </div>

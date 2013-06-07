@@ -46,6 +46,12 @@
   }
 }
 
+@media print{
+  .body-for-print-open{
+    display:block;
+  }
+}
+
 .user-control-panel{
   div{
     position:relative;
