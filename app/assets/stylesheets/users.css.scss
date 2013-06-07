@@ -19,10 +19,6 @@
     margin-bottom:2px;
     border:1px solid $grayLighter;
     border-radius:4px;
-    /*border-top: 1px solid $grayLighter;
-    &:last-child {
-      border-bottom: 1px solid $grayLighter;
-    }*/
   }
 }
 
@@ -36,10 +32,14 @@
     background: #fcfcfc; /* Old browsers */
   }
 
+  .btn, .btn-primary{
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    font-size: 0.90em;
+  }
+
   a{
     padding-left:5px;
     padding-right:5px;
-    text-shadow:1px 1px 1px #FFF;
   }
   .user-card{
     display:none;
