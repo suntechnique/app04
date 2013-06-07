@@ -27,7 +27,7 @@ $.open_user_card = (id) ->
 ###############################################################################
 
 $.print_card = (id) ->
-	$('id').print()
+	$('id').contentWindow.print()
 
 
 #current_card = ''
