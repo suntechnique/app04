@@ -21,11 +21,13 @@
 
             <section class="print-card-body">
 
-                <div style="float:left">
-                  <%  if user.avatar? %>
-                    <%= image_tag user.avatar, size: "105x135" %>
-                  <% end %>
+              <%  if user.avatar? %>
+                <div style="float:left" class="user-avatar">
+
+                  <%= image_tag user.avatar, size: "105x135" %>
+
                 </div>
+              <% end %>
 
               <div style="font-size:12px; text-align:right; float:right"><%= user.name %></div>
             </section>
