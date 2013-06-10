@@ -29,8 +29,13 @@ $.open_user_card = (id) ->
 $.open_for_print_card = (id) ->
 	$(id).attr({'class':'modal-body body-for-print-open'})
 
-$.print_card = ->
-	$('.body-for-print-open').contentWindow.print()
+$.print_card = (id) ->
+	divToPrint = document.getElementById(id)
+	newWin = window.open()
+	newWin.document.write(divToPrint.innerHTML)
+	newWin.print()
+	if (navigator.appName != 'Microsoft Internet Explorer')
+		newWin.window.close()
 	#alert('print: ' + id)
 
 $.close_card = (id) ->
