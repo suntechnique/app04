@@ -11,22 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130605065631) do
-=======
-ActiveRecord::Schema.define(:version => 20130604052008) do
->>>>>>> master
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
     t.text     "text"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "images", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "path"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -45,15 +34,11 @@ ActiveRecord::Schema.define(:version => 20130604052008) do
     t.datetime "updated_at",                             :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-<<<<<<< HEAD
     t.boolean  "admin",               :default => false
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-=======
-    t.boolean  "admin",           :default => false
->>>>>>> master
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
