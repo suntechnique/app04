@@ -24,11 +24,24 @@
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="$.close_card('#print-id-<%= user.id %>')">×</button>
     <h3 id="myModalLabel"><%= user.name %></h3>
   </div>
-  <div id="print-id-<%= user.id %>" class="modal-body body-for-print-closed">
-    <p><%= user.name %> card</p>
+  <div id="print-id-<%= user.id %>" class="modal-body hidden-print">
+	  <div class="content-print-card">
+      <section class="print-card-head">
+        <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+      </section>
+	    <section class="print-card-body">
+	      <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+	    </section>
+	    <section class="print-card-foot">
+	      <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+	    </section>
+	  </div>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true" onclick="$.close_card('#print-id-<%= user.id %>')">Close</button>
-    <button class="btn btn-primary" onclick="$.print_card('print-id-<%= user.id %>')">Print</button>
+    <button class="btn btn-primary" onclick="print()">Print</button>
   </div>
 </div>
