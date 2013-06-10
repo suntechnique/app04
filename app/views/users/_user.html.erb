@@ -7,14 +7,44 @@
   <% end %>
 
   <div id="print-body-<%= user.id %>" class="user-card user-card-closed">
-    <aside class="span4">
-      <section>
-        <h1><%= user.name %></h1>
-      </section>
-      <section class="user-control-panel">
-        <a href="#myModal-<%= user.id %>" role="button" class="btn btn-primary" data-toggle="modal" onclick="$.open_for_print_card('#print-id-<%= user.id %>')">print</a>
-      </section>
-    </aside>
+
+      <aside>
+
+
+        <div id="print-id-<%= user.id %>" class="hidden-print">
+          <div class="content-print-card">
+
+            <section class="print-card-head">
+              <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+              <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+            </section>
+
+            <section class="print-card-body">
+
+                <div style="float:left">
+                  <%  if user.avatar? %>
+                    <%= image_tag user.avatar, size: "105x135" %>
+                  <% end %>
+                </div>
+
+              <div style="font-size:12px; text-align:right; float:right"><%= user.name %></div>
+            </section>
+
+            <section class="print-card-foot">
+              <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:right; font-weight:bold; color:#FFF;">1585</div>
+            </section>
+
+          </div>
+        </div>
+
+
+      </aside>
+
+
+      <aside class="user-control-panel">
+        <a href="#myModal-<%= user.id %>" role="button" class="btn btn-primary" data-toggle="modal" onclick="$.open_for_print_card('#print-id-<%= user.id %>')">print card</a>
+      </aside>
+
   </div>
 
 </li>
@@ -25,20 +55,20 @@
     <h3 id="myModalLabel"><%= user.name %></h3>
   </div>
   <div id="print-id-<%= user.id %>" class="modal-body hidden-print">
-	  <div class="content-print-card">
+    <div class="content-print-card">
       <section class="print-card-head">
         <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
-	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+        <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
       </section>
-	    <section class="print-card-body">
-	      <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
-	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
-	    </section>
-	    <section class="print-card-foot">
-	      <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
-	      <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
-	    </section>
-	  </div>
+      <section class="print-card-body">
+        <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+        <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+      </section>
+      <section class="print-card-foot">
+        <div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;">ГОРОДСКОЕ УПРАВЛЕНИЕ ЖКХ</div>
+        <div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+      </section>
+    </div>
   </div>
   <div class="modal-footer">
     <button class="btn" data-dismiss="modal" aria-hidden="true" onclick="$.close_card('#print-id-<%= user.id %>')">Close</button>
