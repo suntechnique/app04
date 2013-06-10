@@ -6,8 +6,8 @@ module UsersHelper
 	#	image_tag(gravatar_url, alt: user.name, class: "gravatar")
 	#end
 
-	def user_avatar(user)
-		user_avatar_url = "images/users/avatar/#{user.avatar}"
-		image_tag(user_avatar_url, alt: user.name)
-	end
+	#def user_avatar(user)
+	#	user_avatar_url = "images/users/avatar/#{user.avatar}"
+	#	image_tag(user_avatar_url, alt: user.name)
+	#end
 end

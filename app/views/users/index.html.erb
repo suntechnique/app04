@@ -1,9 +1,18 @@
 <% provide(:title, 'All users') %>
+
 <h1>All users</h1>
+
+<section class="user-control-panel">
+  <p>
+    <div>
+	    <%= link_to "add new card", '#', :class => "btn btn-primary" %>
+    </div>
+  </p>
+</section>
 
 <%= will_paginate %>
 
-<ul class="users">
+<ul class="users-list">
   <%= render @users %>
 </ul>
 
