@@ -59,25 +59,16 @@
         left: 20px;
         bottom:25px;
         border:1px solid #000;
+				display:block;
       }
     }
-
   }
 }
 
 @media print {
-  body * {
-    visibility:hidden;
-  }
-
-  .visible-print, .visible-print *{
-    visibility: visible;
-  }
-
-  .hidden-print {
-    visibility: none;
-  }
-
+  body * {visibility:hidden;}
+  .visible-print, .visible-print *{visibility: visible;}
+  .hidden-print {visibility: none;}
 }
 
 .content-print-card{
