@@ -2,13 +2,17 @@
 
 <h1>All users</h1>
 
-<section class="user-control-panel">
-  <p>
-    <div>
-	    <%= link_to "add new card", '#', :class => "btn btn-primary" %>
-    </div>
-  </p>
-</section>
+<% if signed_in? && current_user.admin? %>
+	<section class="user-control-panel">
+
+    <p>
+      <div>
+	      <%= link_to "add new card", '#', :class => "btn btn-primary" %>
+      </div>
+    </p>
+
+	</section>
+<% end %>
 
 <%= will_paginate %>
 
