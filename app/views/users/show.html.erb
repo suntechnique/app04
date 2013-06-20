@@ -1,11 +1,46 @@
 <% provide(:title, @user.name) %>
+
+<div style="margin-bottom:20px;">
+	<%= link_to "BACK", :back, class: "btn btn-primary" %>
+</div>
+
 <div class="row">
   <aside class="span4">
     <section>
       <h1>
-        <%= image_tag @user.avatar.url, size: "200x200" %>
         <%= @user.name %>
       </h1>
     </section>
   </aside>
+</div>
+
+<div class="row" style="margin-left:10px;">
+	<div id="print-id-<%= @user.id %>">
+		<div class="content-print-card visible-print">
+			<div class="print-card-head">
+				<div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:center; font-weight:bold;"><%= @user.secure_type %></div>
+				<div style="font-size:12px; text-align:right;">Верхняя Салда</div>
+			</div>
+
+			<div class="print-card-body">
+				<%  if @user.avatar? %>
+					<div class="user-avatar">
+						<%= image_tag @user.avatar.url, size: "105x135" %>
+					</div>
+				<% end %>
+				<div style="font-size:12px; text-align:right; float:right"><%= @user.name %></div>
+			</div>
+
+			<div class="print-card-foot">
+				<div style="font-family: Verdana, Geneva, sans-serif; font-size: 1.25em; text-align:right; font-weight:bold; color:#FFF;"><%= @user.tabel %></div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div style="margin-top:20px;">
+	<button class="btn btn-primary" onclick="print()">Print</button>
 </div>

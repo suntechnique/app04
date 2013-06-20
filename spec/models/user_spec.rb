@@ -46,10 +46,6 @@ describe User do
 	end
 
 
-
-
-
-
 	it { should respond_to(:name) }
 	it { should respond_to(:email) }
 

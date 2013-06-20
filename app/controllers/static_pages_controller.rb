@@ -25,6 +25,6 @@ class StaticPagesController < ApplicationController
 	  #  format.html # index.html.erb
 	  #end
 	  #render :layout => false
-  end
+	end
 
 end

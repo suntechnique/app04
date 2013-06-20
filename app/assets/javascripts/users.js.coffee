@@ -27,10 +27,10 @@ $.open_user_card = (id) ->
 ###############################################################################
 
 $.open_for_print_card = (id) ->
-	$(id).attr({'class':'modal-body visible-print'})
+	$(id).attr({'class':'visible-print'})
 
 $.close_card = (id) ->
-	$(id).attr({'class':'modal-body hidden-print'})
+	$(id).attr({'class':'hidden-print'})
 
 
 #current_card = ''

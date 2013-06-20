@@ -28,13 +28,19 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(params[:user])
+		if @user[:password]
+			flash[:success] = "password empty"
+			render add_path
+		end
+
 		if @user.save
-			sign_in @user
+			#sign_in @user
 			flash[:success] = "Welcome to the Sample App!"
 			redirect_to @user
 		else
 			render 'new'
 		end
+
 	end
 
   def edit
@@ -56,6 +62,14 @@ class UsersController < ApplicationController
 		User.find(params[:id]).destroy
 		flash[:success] = "User destroyed."
 		redirect_to users_url
+	end
+
+	def addcard
+		@user = User.new
+		#respond_to do |format|
+		#  format.html # index.html.erb
+		#end
+		#render :layout => false
 	end
 
   private

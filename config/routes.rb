@@ -10,6 +10,8 @@ App04::Application.routes.draw do
   match 'contact', to: 'static_pages#contact'
   match 'about', to: 'static_pages#about'
 
+	match 'add', to: 'users#addcard'
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   #get "users/new"
@@ -27,9 +29,7 @@ App04::Application.routes.draw do
   get "comments/destroy"
 
   #get "comments/edit"
-
   #put "comments/update"
-
   #get "comments/show"
 
   resources :posts do
