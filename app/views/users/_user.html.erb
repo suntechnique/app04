@@ -7,7 +7,7 @@
   <% end %>
 
   <div id="print-body-<%= user.id %>" class="user-card user-card-closed">
-      <aside>
+      <div>
         <div id="print-id-<%= user.id %>" class="hidden-print">
           <div class="content-print-card">
 
@@ -17,7 +17,7 @@
             </div>
 
             <div class="print-card-body">
-              <%  if user.avatar? %>
+              <% if user.avatar? %>
                 <div style="float:left" class="user-avatar">
                   <%= image_tag user.avatar, size: "105x135" %>
                 </div>
@@ -31,11 +31,11 @@
 
           </div>
         </div>
-      </aside>
+      </div>
 
-      <aside class="user-control-panel">
+      <div class="user-control-panel">
         <a href="#myModal-<%= user.id %>" role="button" class="btn btn-primary" data-toggle="modal" onclick="$.open_for_print_card('#print-id-<%= user.id %>')">print card</a>
-      </aside>
+      </div>
   </div>
 </li>
 
