@@ -16,7 +16,8 @@ class UsersController < ApplicationController
 	###############################################################################################################
 
   def new
-		@user = User.new
+		#@user = User.new
+
   end
 
 	def show
@@ -27,19 +28,19 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user])
-		if @user[:password]
-			flash[:success] = "password empty"
-			render add_path
-		end
+		#@user = User.new(params[:user])
+		#if @user[:password]
+		#	flash[:success] = "password empty"
+		#	render add_path
+		#end
 
-		if @user.save
+		#if @user.save
 			#sign_in @user
-			flash[:success] = "Welcome to the Sample App!"
-			redirect_to @user
-		else
-			render 'new'
-		end
+		#	flash[:success] = "Welcome to the Sample App!"
+		#	redirect_to @user
+		#else
+		#	render 'new'
+		#end
 
 	end
 
@@ -64,8 +65,9 @@ class UsersController < ApplicationController
 		redirect_to users_url
 	end
 
-	def addcard
-		@user = User.new
+	def add
+		@user_new = User.new(params[:user])
+		#@user = User.new
 		#respond_to do |format|
 		#  format.html # index.html.erb
 		#end
