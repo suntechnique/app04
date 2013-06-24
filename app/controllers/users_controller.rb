@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 	###############################################################################################################
 
   def new
-		#@user = User.new
+		@user = User.new
 
   end
 
@@ -28,19 +28,19 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		#@user = User.new(params[:user])
+		@user = User.new(params[:user])
 		#if @user[:password]
 		#	flash[:success] = "password empty"
 		#	render add_path
 		#end
 
-		#if @user.save
+		if @user.save
 			#sign_in @user
-		#	flash[:success] = "Welcome to the Sample App!"
-		#	redirect_to @user
-		#else
-		#	render 'new'
-		#end
+			flash[:success] = "Welcome to the Sample App!"
+			redirect_to @user
+		else
+			render 'new'
+		end
 
 	end
 
@@ -65,13 +65,28 @@ class UsersController < ApplicationController
 		redirect_to users_url
 	end
 
+	def addcard
+		@user = User.new
+	end
+
 	def add
-		@user_new = User.new(params[:user])
-		#@user = User.new
-		#respond_to do |format|
-		#  format.html # index.html.erb
-		#end
-		#render :layout => false
+		#@user = User.new(params[:user])
+		#@user.write_attributes(params[:user])
+		#redirect_to @user
+
+
+		@user = User.new(params[:user])
+
+		respond_to do |format|
+			if @user.save
+				format.html { redirect_to @user, notice: 'Post was successfully created.' }
+				format.json { render json: @user, status: :created, location: @user }
+			else
+				format.html { render action: "adduser" }
+				format.json { render json: @user.errors, status: :unprocessable_entity }
+			end
+		end
+
 	end
 
   private

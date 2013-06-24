@@ -10,4 +10,12 @@ module UsersHelper
 	#	user_avatar_url = "images/users/avatar/#{user.avatar}"
 	#	image_tag(user_avatar_url, alt: user.name)
 	#end
+
+	def gen_email
+		#v_date = date
+		#h = Hash.new(v_date)
+		#h.to_s
+		#tmp1 = SecureRandom.urlsafe_base64
+		#email = tmp1
+	end
 end

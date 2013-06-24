@@ -1,10 +1,11 @@
 <% provide(:title, 'добавление пропуска') %>
+<% provide(:rnd_email,gen_email) %>
 <h1>добавление пропуска</h1>
 
 <div class="row">
 	<div class="span6 offset3">
-		<%= form_for(@new_user, :html => { :multipart => true }) do |f| %>
-			<%= render 'shared/error_messages' %>
+		<%= form_for(@user, :html => { :multipart => true }) do |f| %>
+			<% #render 'shared/error_messages' %>
 
 			<%= f.label "имя" %>
 			<%= f.text_field :name %>
@@ -18,7 +19,14 @@
 			<%= f.label "фотография" %>
 			<%= f.file_field :avatar %>
 
-			<p><%= f.submit "добавить", class: "btn btn-primary" %></p>
+
+			<%= f.text_field :email, type: "hidden", value: :rnd_email %>
+			<%= f.password_field :password, type: "hidden", value:"123456789" %>
+			<%= f.password_field :password_confirmation, type: "hidden", value:"123456789" %>
+
+			<p>
+				<%= f.submit "добавить", class: "btn btn-primary" %>
+			</p>
 		<% end %>
 	</div>
 </div>

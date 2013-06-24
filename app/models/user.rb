@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_attached_file :avatar
 	has_secure_password
 
-	before_save { |user| user.email = email.downcase }
+	#before_save { |user| user.email = email.downcase }
 	before_save :create_remember_token
 
 	#validates :name, presence: true, length: { maximum: 61 }
