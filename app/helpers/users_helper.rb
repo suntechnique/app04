@@ -15,7 +15,7 @@ module UsersHelper
 		#v_date = date
 		#h = Hash.new(v_date)
 		#h.to_s
-		#tmp1 = SecureRandom.urlsafe_base64
-		#email = tmp1
+		tmp1 = SecureRandom.urlsafe_base64(6)
+		email = "mail#{tmp1}@usercard.org"
 	end
 end
