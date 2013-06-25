@@ -7,17 +7,37 @@
 		<%= form_for(@user, :html => { :multipart => true }) do |f| %>
 			<% #render 'shared/error_messages' %>
 
-			<%= f.label "имя" %>
+			<div style="padding-left: 5px;">
+				<%= f.label "имя" %>
+			</div>
 			<%= f.text_field :name %>
 
-			<%= f.label "табельный номер" %>
+			<div style="padding-left: 5px;">
+				<%= f.label "табельный номер" %>
+			</div>
 			<%= f.text_field :tabel %>
 
-			<%= f.label "назначение пропуска" %>
+			<div style="padding-left: 5px;">
+				<%= f.label "назначение пропуска" %>
+			</div>
 			<%= f.text_field :secure_type %>
 
-			<%= f.label "фотография" %>
+			<div style="padding-left: 5px;">
+				<%= f.label "фотография" %>
+			</div>
 			<%= f.file_field :avatar %>
+
+			<div style="padding-left: 5px;">
+				<%= f.label "назначение пропуска" %>
+			</div>
+			<%= f.text_field :target_card %>
+
+			<div style="border:1px solid #999999; border-radius:5px; padding: 5px; margin-bottom:10px;">
+				<%= f.label "тип пропуска" %>
+				<%= f.radio_button :type_card, "1", class: "radio_button red" %> красный<br>
+				<%= f.radio_button :type_card, "2", class: "radio_button blue" %> синий<br>
+				<%= f.radio_button :type_card, "3", class: "radio_button green" %> зеленый<br>
+			</div>
 
 
 			<%= f.text_field :email, type: "hidden", value: gen_email %>

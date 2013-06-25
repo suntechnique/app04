@@ -5,6 +5,7 @@
       <nav>
         <ul class="nav pull-right">
           <li><%= link_to "параметры", home_path %></li>
+
           <% if signed_in? %>
             <li><%= link_to "список", users_path %></li>
             <li id="fat-menu" class="dropdown">
@@ -20,10 +21,10 @@
                 </li>
               </ul>
             </li>
-
           <% else %>
             <li><%= link_to "Вход", signin_path %></li>
           <% end %>
+
 					<li><%= link_to "справка", help_path %></li>
         </ul>
       </nav>
