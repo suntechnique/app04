@@ -27,18 +27,22 @@
 			</div>
 			<%= f.file_field :avatar %>
 
-			<div style="padding-left: 5px;">
-				<%= f.label "назначение пропуска" %>
-			</div>
-			<%= f.text_field :target_card %>
 
+			<div style="border:1px solid #999999; border-radius:5px; padding: 5px; padding-top: 5px; margin-bottom:10px;">
+				<%= f.label "назначение пропуска" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:50px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+			</div>
 			<div style="border:1px solid #999999; border-radius:5px; padding: 5px; margin-bottom:10px;">
 				<%= f.label "тип пропуска" %>
-				<%= f.radio_button :type_card, "1", class: "radio_button red" %> красный<br>
-				<%= f.radio_button :type_card, "2", class: "radio_button blue" %> синий<br>
-				<%= f.radio_button :type_card, "3", class: "radio_button green" %> зеленый<br>
+				<%= f.radio_button :type_card, "1", class: "radio_button red", onclick: "$.set_color_card('1')" %> красный<br>
+				<%= f.radio_button :type_card, "2", class: "radio_button blue", onclick: "$.set_color_card('2')" %> синий<br>
+				<%= f.radio_button :type_card, "3", class: "radio_button green", onclick: "$.set_color_card('3')" %> зеленый<br>
 			</div>
-
 
 			<%= f.text_field :email, type: "hidden", value: gen_email %>
 			<%= f.password_field :password, type: "hidden", value:"123456789" %>

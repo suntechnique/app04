@@ -32,6 +32,17 @@ $.open_for_print_card = (id) ->
 $.close_card = (id) ->
 	$(id).attr({'class':'hidden-print'})
 
+$.set_color_card = (n) ->
+  #document.getElementsByClassName('target_card').backgroundColor = '#005cdd' if n == "1"
+  #document.getElementsByClassName('target_card').backgroundColor = '#dd1200' if n == "2"
+  #document.getElementsByClassName('target_card').backgroundColor = '#03ff00' if n == "3"
+
+  c = {1:"red",2:"blue",3:"green"}
+
+  #if n == "1"
+  matchElementsD1 = $(".target_card")
+  $(matchElementsD1).each ->
+    $(this).css("background-color",c[n])
 
 #current_card = ''
 #last_card = ''
