@@ -1,5 +1,9 @@
 App04::Application.routes.draw do
 
+  get "users_cards/new"
+
+  get "users_cards/create"
+
 	#get "static_pages/home"
   #get "static_pages/help"
   #get "static_pages/about"

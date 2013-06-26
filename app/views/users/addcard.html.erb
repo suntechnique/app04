@@ -18,24 +18,18 @@
 			<%= f.text_field :tabel %>
 
 			<div style="padding-left: 5px;">
-				<%= f.label "назначение пропуска" %>
-			</div>
-			<%= f.text_field :secure_type %>
-
-			<div style="padding-left: 5px;">
 				<%= f.label "фотография" %>
 			</div>
 			<%= f.file_field :avatar %>
 
-
 			<div style="border:1px solid #999999; border-radius:5px; padding: 5px; padding-top: 5px; margin-bottom:10px;">
 				<%= f.label "назначение пропуска" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:50px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
-				<%= f.text_field :target_card, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field @user.UserCard, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :attr01, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :attr01, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :attr01, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :attr01, class: "target_card", style: "display:inline; width:50px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
+				<%= f.text_field :attr01, class: "target_card", style: "display:inline; width:30px; font-size:16px; font-weight:bold; color:#FFF; text-align:center;", size: "1" %>
 			</div>
 			<div style="border:1px solid #999999; border-radius:5px; padding: 5px; margin-bottom:10px;">
 				<%= f.label "тип пропуска" %>

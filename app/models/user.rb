@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
 	#include Paperclip::Glue
-	has_many :UserCard
 
 	attr_accessible :name, :email, :password, :password_confirmation, :tabel, :secure_type, :avatar
 	has_attached_file :avatar
+	has_many :UserCard
 	has_secure_password
 
 	#before_save { |user| user.email = email.downcase }
