@@ -14,6 +14,7 @@ gem 'bcrypt-ruby'
 group :test, :development do
 	gem "rspec-rails"
 	gem 'capybara', '1.1.2'
+	gem 'sqlite3'
 end
 
 #gem "capybara", '1.1.2', :group => "test"

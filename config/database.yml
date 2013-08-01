@@ -41,25 +41,47 @@
 #  password: root
 #  socket: /var/run/mysqld/mysqld.sock
 
-development:
-  adapter: postgresql
-  encoding: utf8
-  database: blog_development
-  pool: 5
-  username: rails_user
-  password: f0udl7z6A
+#development:
+#  adapter: postgresql
+#  encoding: utf8
+#  database: blog_development
+#  pool: 5
+#  username: rails_user
+#  password: f0udl7z6A
 
+#test:
+#  adapter: postgresql
+#  encoding: utf8
+#  database: blog_test
+#  pool: 5
+#  username: rails_user
+#  password: f0udl7z6A
+#production:
+#  adapter: postgresql
+#  encoding: utf8
+#  database: blog_production
+#  pool: 5
+#  username: rails_user
+#  password: f0udl7z6A
+
+development:
+  adapter: sqlite3
+  encoding: utf8
+  database: blog_development.db
+  pool: 5
+  #username: rails_user
+  #password: f0udl7z6A
 test:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: utf8
-  database: blog_test
+  database: blog_test.db
   pool: 5
-  username: rails_user
-  password: f0udl7z6A
+  #username: rails_user
+  #password: f0udl7z6A
 production:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: utf8
-  database: blog_production
+  database: blog_production.dbr
   pool: 5
-  username: rails_user
-  password: f0udl7z6A
+  #username: rails_user
+  #password: f0udl7z6A
