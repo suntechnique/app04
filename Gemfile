@@ -10,6 +10,7 @@ gem 'pg'
 gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
+gem 'vkontakte_api'
 
 group :test, :development do
 	gem "rspec-rails"
