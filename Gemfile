@@ -11,7 +11,7 @@ gem 'json'
 gem 'pg'
 gem 'haml-rails'
 #gem 'bootstrap-sass-rails', '3.0.0.2'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'bcrypt-ruby'
 gem 'vkontakte_api'
 
